@@ -10,7 +10,8 @@ const app = express();
 //Creating a middleware to check the request is in JSON format
 app.use(express.json());
 
-//Initailzing CORS Policy 
+//Initializing CORS Policy 
+
 app.use(function (request, response, next) {
     response.setHeader("Access-Control-Allow-Origin", "*");
     response.setHeader("Access-Control-Allow-Credentials", "true");
@@ -25,6 +26,6 @@ app.use('/forklift',Router);
 
 //Defining the connection port number
 app.listen(4000,()=>{
-    console.log("Sucess");
+    console.log("Success");
 })
 
